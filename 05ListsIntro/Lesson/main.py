@@ -30,3 +30,9 @@ def are_reversed(list1, list2):
 
 print("Demonstrate are_reversed")
 print("[1, 2, 4] & [3, 2, 1] -> ", are_reversed([1, 2, 4], [3, 2, 1]))
+
+def make_repeated_max(list1):
+    first = list1[0]
+    middle = list1[1]
+    last = list1[2]
+    max(first, middle, last)
