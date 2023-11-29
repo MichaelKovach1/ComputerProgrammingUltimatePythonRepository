@@ -140,5 +140,6 @@ def reverse_in_place(list1):
     return list1
 
 print("Demonstrate reverse_in_place")
-print("[1, 7, 6] -> ", reverse_in_place([1, 7, 6]))
-print("[4, 8, 9] -> ", reverse_in_place([4, 8, 9]))
+new_list = reverse_in_place([1, 2, 5])
+print("Original List Was: [1, 2, 5]")
+print("New List is: ", new_list)
