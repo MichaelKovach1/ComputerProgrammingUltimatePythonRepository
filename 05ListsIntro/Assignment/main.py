@@ -75,7 +75,7 @@ def all_true(list1):
     first = list1[0]
     middle = list1[1]
     last = list1[2]
-    if first == middle == last:
+    if first == middle == last == True:
         if first == True:
             return True
     else:
@@ -105,3 +105,36 @@ def mostly_true(list1):
 print("Demonstrate mostly_true")
 print("[False, False, True] -> ", mostly_true([False, False, True]))
 print("[True, False, True] -> ", mostly_true([True, False, True]))
+
+def make_copy(list1):
+    original_list = list1
+    new_list = list1
+    return new_list
+
+print("Demonstrate make_copy")
+print("[1, 2, 1, 2] -> ", make_copy([1, 2, 1, 2]))
+print("[1, 2, 4] -> ", make_copy([1, 2, 4]))
+
+def repeat_thrice(number):
+    return [number, number, number]
+
+print("Demonstrate repeat_thrice")
+print("1 -> ", repeat_thrice(1))
+print("2 -> ", repeat_thrice(2))
+
+def make_reversed_copy(list1):
+    first = list1[0]
+    second = list1[1]
+    last = list1[2]
+    return [last, second, first]
+
+print("Demonstrate make_reversed_copy")
+print("[1, 7, 6] -> ", make_reversed_copy([1, 7, 6]))
+print("[4, 8, 9] -> ", make_reversed_copy([4, 8, 9]))
+
+def reverse_in_place(list1):
+    first = list1[0]
+    second = list1[1]
+    last = list1[2]
+    list1 = [last, second, first]
+    return list1
