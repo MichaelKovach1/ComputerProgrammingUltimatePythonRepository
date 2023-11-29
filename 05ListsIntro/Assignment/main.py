@@ -138,3 +138,7 @@ def reverse_in_place(list1):
     last = list1[2]
     list1 = [last, second, first]
     return list1
+
+print("Demonstrate reverse_in_place")
+print("[1, 7, 6] -> ", reverse_in_place([1, 7, 6]))
+print("[4, 8, 9] -> ", reverse_in_place([4, 8, 9]))
