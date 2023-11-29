@@ -32,18 +32,6 @@ print("Demonstrate common_edge")
 print("[1, 2, 4] & [3, 2, 1] -> ", common_edge([1, 2, 4], [3, 2, 1]))
 print("[1, 2, 4, 5] & [2, 3, 2, 4] -> ", common_edge([1, 2, 4, 5], [2, 3, 2, 4]))
 
-
-def make_repeated_max(list1):
-    first = list1[0]
-    middle = list1[1]
-    last = list1[2]
-    maximum = max(first, middle, last)
-    return [maximum, maximum, maximum]
-
-print("Demonstrate make_repeated_max")
-print("[1, 2, 3] -> ", make_repeated_max([1, 2, 3]))
-print("[1, 4, 3] -> ", make_repeated_max([1, 4, 3]))
-
 def all_the_same(list1):
     first = list1[0]
     middle = list1[1]
