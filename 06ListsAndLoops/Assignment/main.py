@@ -95,7 +95,7 @@ def has_vowel(list):
     else:
          return False
 print("---has_vowel---")
-print(has_vowel(["a", "e", "n", "g", "h"]))d
+print(has_vowel(["a", "e", "n", "g", "h"]))
 print(has_vowel(["m", "b", "n", "g", "h"]))
     
 
