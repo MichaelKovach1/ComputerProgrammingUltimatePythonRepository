@@ -41,8 +41,11 @@ def average_act_score(scoreList):
         else:
             ValidScoreCounter = ValidScoreCounter
             Total = Total
-    mean = Total/ValidScoreCounter
-    return mean
+    if ValidScoreCounter == 0:
+        return None
+    else:
+        mean = Total/ValidScoreCounter
+        return mean
 Inputlist = [36, 45, 28, 13, 19]
 print("---average_act_score---")
 print(average_act_score(Inputlist))
@@ -90,7 +93,7 @@ print(mostly_true([True, False, True, False]))
 print(mostly_true([True, True, True, False]))
 
 def has_vowel(list):
-    if "a" in list or "e" in list or "i" in list or "o" in list or "u" in list or "y" in list:
+    if "a" in list or "e" in list or "i" in list or "o" in list or "u" in list:
          return True
     else:
          return False
