@@ -100,5 +100,101 @@ def has_vowel(list):
 print("---has_vowel---")
 print(has_vowel(["a", "e", "n", "g", "h"]))
 print(has_vowel(["m", "b", "n", "g", "h"]))
+
+def all_the_same(list1):
+    prev_num = list1[-1]
+    truecount = 0
+    for num in list1:
+        if num == prev_num:
+            truecount = truecount + 1
+            prev_num = num
+        else:
+            return False
+    if truecount == len(list1):
+        return True
+print("---all_the_same---")
+print(all_the_same([1, 1]))
+print(all_the_same([1, 2, 1, 1]))
+
+def increasing(list1):
+    prevnum = list1[-1]
+    truecount = 0
+    for num in list1:
+        if num == prevnum:
+            return False
+        elif num == list1[0]:
+            if prevnum > num:
+                truecount = truecount + 1
+                prevnum = num
+        else:
+            if num > prevnum:
+                truecount = truecount + 1
+                prevnum = num
+            else:
+                return False
+    if truecount == len(list1):
+        return True
+print("---increasing---")
+print(increasing([1, 2, 3, 5]))
+print(increasing([1, 2, 2, 1, 2]))
+
+def is_incrementing(list1):
+    prevnum = list1[-1]
+    truecount = 0
+    for num in list1:
+        if num == prevnum:
+            return False
+        elif num == list1[0]:
+            if prevnum - num == len(list1) - 1:
+                truecount = truecount + 1
+                prevnum = num
+        else:
+            if num - prevnum == 1:
+                truecount = truecount + 1
+                prevnum = num
+            else:
+                return False
+    if truecount == len(list1):
+        return True
+print("---is_incrementing---")
+print(is_incrementing([1, 2, 3, 4, 6]))
+print(is_incrementing([2, 3, 4, 5]))
+
+def has_adjacent_repeat(list):
+    prev_num = list[-1]
+    complete = False
+    for num in list:
+        if prev_num == num:
+            complete = True
+        else:
+            prev_num = num
+    if complete == False:
+        return False
+    elif complete == True:
+        return True
+print("---has_adjacent_repeat---")
+print(has_adjacent_repeat([1, 9, 2, 2, 4, 5]))
+print(has_adjacent_repeat([1, 3]))
+
+def sum_with_skips(list):
+    skip_num = -1
+    total = 0
+    ignore = False
+    seen_skip_num = False
+    for num in list:
+        if num == skip_num and seen_skip_num == False:
+            ignore = True
+            seen_skip_num = True
+        elif num == skip_num and seen_skip_num == True:
+            ignore = False
+            seen_skip_num = False
+        elif ignore == False:
+            total = total + num
+    return total
+print("---sum_with_skips---")
+print(sum_with_skips([1, 2, 3, 4, -1, 5, 6, -1, 2]))
+print(sum_with_skips([4, -1, 5, -1]))
+        
+        
     
 
