@@ -61,3 +61,26 @@ def in_alphabetical_order(word):
 print("---in_alpabetical_order---")
 print(in_alphabetical_order("brink"))
 print(in_alphabetical_order("is"))
+
+def alternate_case(word):
+    result = ""
+    letter_counter = 1
+    uppercase = False
+    for letter in word:
+        if letter_counter == 1:
+            uppercase = True
+            letter_counter = 0
+        elif letter_counter == 0:
+            uppercase = False
+            letter_counter = 1
+        if uppercase == True:
+            result = result + letter.upper()
+        elif uppercase == False:
+            result = result + letter.lower()
+    return result
+print("---alternate_case---")
+print(alternate_case("hello"))
+print(alternate_case("better"))
+
+def remove_vowels():
+
