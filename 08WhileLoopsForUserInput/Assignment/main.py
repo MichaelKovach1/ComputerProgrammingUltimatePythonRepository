@@ -63,7 +63,7 @@ def vending_machine():
     while due > 0:
         print("Amount Due: ", due)
         coin = input("Insert Coin: ")
-        if coin in "10,5,25":
+        if int(coin) in [10, 5, 25]:
             due = due - int(coin)
         else:
             due = due
@@ -77,12 +77,33 @@ def hangman():
     lives = 3
     wordlist = ["elephant", "pixie", "table", "hollow"]
     secret = random.choice(wordlist)
+    guessed_count = 0
     guessed = False
-    for letter in secret:
-        print(" _ ", end="")
-    while guessed == False:
-        print("Guess a letter")
+    already_guessed = []
+    while guessed == False and lives != 0:
+        for letter in secret:
+            if letter in already_guessed:
+                print(letter, end="")
+            else:
+                print(" _ ", end="")
+        print(" Guess a letter")
         guess = input()
-
-vending_machine()
-
+        if guess in already_guessed:
+            print("You Already Tried That Letter")
+        if guess in secret:
+            already_guessed.append(guess)
+            guessed_count = guessed_count + secret.count(guess)
+        else:
+            print("INCORRECT")
+            lives = lives - 1
+        if guessed_count == len(secret):
+            guessed = True
+        else:
+            pass
+    if guessed == True:
+        print("You Guessed the Word!!!")
+        print("The Word Was:", secret)
+    elif lives == 0:
+        print("You Failed...")
+        print("The Word Was:", secret)
+hangman()
