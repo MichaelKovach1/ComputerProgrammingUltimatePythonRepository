@@ -1,4 +1,4 @@
-Just like in the lesson, these exercises will be unusual functions: they will take no arguments and not return anything, and will prompt the user for input within them.
+abJust like in the lesson, these exercises will be unusual functions: they will take no arguments and not return anything, and will prompt the user for input within them.
 
 1. `number_guesser`
 
